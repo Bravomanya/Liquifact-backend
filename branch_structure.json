@@ -1,0 +1,18 @@
+{
+  "default_branch": "main",
+  "branches": [
+    "main",
+    "origin",
+    "security/issue-1528-reject-over-funding-instead-of-silently"
+  ],
+  "parent": {
+    "main": null,
+    "origin": "main",
+    "security/issue-1528-reject-over-funding-instead-of-silently": "main"
+  },
+  "order": [
+    "main",
+    "origin",
+    "security/issue-1528-reject-over-funding-instead-of-silently"
+  ]
+}
