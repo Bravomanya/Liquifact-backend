@@ -8,7 +8,7 @@ beforeEach(() => store.reset());
 
 describe('system', () => {
   test('GET /health', async () => {
-    const res = await request(app).get('health');
+    const res = await request(app).get('/health');
     expect(res.status).toBe(200);
     expect(res.body.status).toBe('ok');
   });
@@ -124,7 +124,7 @@ describe('invoices', () => {
     }
   });
 
-  test('rejects amount above face value with 400', async () => {
+  test('rejects amount above face value with 422', async () => {
     const res = await request(app).post('/api/invoices/INV_0002/fund').send({ amount: 7001 });
     expect(res.status).toBe(422);
     expect(res.body.code).toBe('FUNDING_EXCEEDES_CAPACITY');
